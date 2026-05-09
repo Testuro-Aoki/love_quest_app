@@ -72,8 +72,8 @@ function addExperience(experiencePoints) {
             console.log('新しい経験値:', data.newExperience);
             // 更新された経験値を表示
             document.getElementById('experience').textContent = data.newExperience;
-            console.log('updateLevelに渡される経験値:', data.newExperience);
             updateLevel(data.newExperience);
+            fetchUserData(userId);
         })
         .catch(error => console.error('経験値追加エラー:', error));
 }
